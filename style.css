@@ -1,0 +1,368 @@
+/* 
+Theme Name: gworksKilpailu Child 
+Theme URL: https://arileskinen.com/kilpailu
+Description: gworksKilpailu Child 
+Theme Author: Ari Leskinen
+Author URL: https://arileskinen.com
+Template: gworkskilpailu 
+Version: 1.0.0 
+Text Domain: gworkskilpailu-child 
+*/
+
+/* BASICS */
+
+@font-face {
+  font-family: 'Vinkel-Regular';
+  src: url(https://arileskinen.com//wp-content/themes/gworkskilpailu-child/fonts/Vinkel-Regular.otf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Vinkel-Light';
+  src: url(https://arileskinen.com//wp-content/themes/gworkskilpailu-child/fonts/Vinkel-Light.otf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Vinkel-Bold';
+  src: url(https://arileskinen.com//wp-content/themes/gworkskilpailu-child/fonts/Vinkel-Bold.otf);
+  font-weight: normal;
+}
+
+body {
+  background-color: #e5007c;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(229, 0, 124, 0.2),
+      rgba(229, 0, 124, 1)
+    ),
+    url('https://arileskinen.com/wp-content/uploads/hero-bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-size: 24px;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Vinkel-Bold', Arial, Helvetica, sans-serif;
+  color: #e5007c;
+}
+
+h2 {
+  font-size: 2.6em;
+  color: #e5007c;
+  letter-spacing: 0;
+  line-height: 86.4px;
+}
+
+h3 {
+  font-size: 1.8em;
+  color: #e5007c;
+  letter-spacing: 0;
+  line-height: 50.4px;
+}
+
+h4 {
+  font-size: 1.4em;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 50.4px;
+}
+
+p {
+  font-family: 'Vinkel-Light', Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 40.08px;
+}
+
+/* NAV */
+
+.site-branding {
+  display: flex;
+  align-items: center;
+  margin: 0 0 50px 0;
+}
+
+.site-branding p {
+  font-size: 18px;
+}
+
+.site-title {
+  color: #fff;
+}
+
+/* SECTIONS */
+
+.entry-content {
+  display: flex;
+  background: #fff;
+  padding: 50px;
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
+
+.entry-hero {
+  padding: 80px 50px 50px;
+  max-width: 50%;
+  margin-top: -150px;
+}
+
+/* BTNS */
+
+.wp-block-button__link {
+  font-family: 'Vinkel-Bold', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #e5007c;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* HERO IMG */
+.wp-post-image {
+  height: auto;
+  max-width: 650px;
+}
+
+/* KILPAILU */
+
+.kilpailu-content {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.kilpailu-content p {
+  font-family: Vinkel-Regular;
+  font-size: 18px;
+  color: #000000;
+  letter-spacing: 0;
+  text-align: center;
+  line-height: 50.4px;
+}
+
+.kilpailu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.kilpailu-kuva {
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.btn-div {
+  width: 280px;
+  text-align: center;
+}
+
+.btn-aanesta {
+  width: 166px;
+  height: 48px;
+  background: #ffffff;
+  border: 3px solid #e5007c;
+  border-radius: 24px;
+  font-family: 'Vinkel-Bold';
+  font-size: 16px;
+  color: #e5007c;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 5px 40px 5px 16px;
+  margin-right: -50px;
+}
+
+.btn-jaa {
+  width: 156px;
+  height: 48px;
+  background: #d8d8d8;
+  border-radius: 24px;
+  font-family: 'Vinkel-Bold';
+  font-size: 16px;
+  color: #555555;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 8px 40px 8px 80px;
+}
+
+.like-box {
+  position: relative;
+}
+
+.like-box .far {
+  position: absolute;
+  right: 24px;
+  top: 8px;
+  transition: all 0.35s ease-out;
+}
+
+.like-box .fas {
+  position: absolute;
+  right: 24px;
+  top: 8px;
+  transition: all 0.4s ease-out;
+  visibility: hidden;
+  transform: scale(0.2);
+  opacity: 0;
+}
+
+.tykkaykset {
+  position: absolute;
+  right: 8px;
+  top: 5px;
+}
+
+.like-box[data-exists='yes'] .fas {
+  transform: scale(1);
+  visibility: visible;
+  opacity: 1;
+}
+
+.like-box[data-exists='yes'] .far {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.kuvanotsikko {
+  font-family: 'Roboto-Bold';
+  font-size: 20px;
+  color: #4a4a4a;
+  letter-spacing: 0;
+  padding: 20px 0 10px 0;
+}
+
+.osallistujan-nimi {
+  font-family: Roboto-Regular;
+  font-size: 14px;
+  color: #4a4a4a;
+  letter-spacing: 1.75px;
+  text-transform: uppercase;
+}
+
+/* OSALLISTU KILPAILUUN */
+
+.osallistu-kilpailuun-content {
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.osallistu-kilpailuun-content-left {
+  max-width: 50%;
+}
+
+.osallistu-kilpailuun-content p {
+  font-family: Vinkel-Regular;
+  font-size: 18px;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 30.06px;
+}
+
+/* SAANNOT JA EHDOT */
+
+.saannot-ja-ehdot {
+  align-items: flex-start;
+}
+
+.saannot-ja-ehdot-width {
+  max-width: 33.3%;
+  padding: 20px;
+}
+
+.saannot-ja-ehdot-kilpailuaika {
+  font-family: Vinkel-Regular;
+  font-size: 16px;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 26.72px;
+}
+
+.saannot-ja-ehdot-kilpailuteksti {
+  font-family: Vinkel-Regular;
+  font-size: 14px;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 23.38px;
+}
+
+.page {
+  width: 80vw;
+  margin: 0 auto;
+}
+
+.formi-text {
+  letter-spacing: 0;
+  line-height: 30.06px;
+}
+
+.saannot-ja-ehdot {
+  align-self: flex-start;
+}
+
+.saannot-text {
+  letter-spacing: 0;
+  line-height: 23.38px;
+}
+
+label {
+  font-size: 14px;
+  color: #000000;
+  letter-spacing: 0;
+}
+
+input {
+  border: 3px solid #d0d0d0;
+  border-radius: 24px;
+  font-size: 16px;
+  color: #000000;
+  letter-spacing: 0;
+  padding: 10px;
+}
+
+.valitse-kuva {
+  background: #d8d8d8;
+  border-radius: 24px;
+  padding: 3% 39%;
+}
+
+.valitse-kuva br {
+  display: none !important;
+}
+
+.Valitsekuva input {
+  display: none;
+}
+
+.saannot {
+  font-size: 16px;
+  color: #000000;
+  letter-spacing: 0;
+  display: inline;
+}
+
+.wpcf7-submit {
+  background: #e5007c;
+  border-radius: 24px;
+  border-radius: 24px;
+  font-family: 'Vinkel-Bold', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 14px;
+}
+
+/* FOOTER */
+
+.site-info {
+  justify-content: center;
+  display: flex;
+}
